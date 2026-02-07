@@ -31,7 +31,6 @@ def main(args):  # Write the function name for the main data preparation logic
     # Reading Data
     df = pd.read_csv(args.raw_data)
 
-    # ------- WRITE YOUR CODE HERE -------
 
     # Step 1: Perform label encoding to convert categorical features into numerical values for model compatibility.  
     # Step 2: Split the dataset into training and testing sets using train_test_split with specified test size and random state.  
