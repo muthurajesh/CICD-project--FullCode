@@ -38,9 +38,6 @@ def main(args):  # Write the function name for the main data preparation logic
     # Step 3: Save the training and testing datasets as CSV files in separate directories for easier access and organization.  
     # Step 4: Log the number of rows in the training and testing datasets as metrics for tracking and evaluation.  
 
-    # Start MLflow Run
-    mlflow.start_run()
-
     # Log arguments
     logging.info(f"Input data path: {args.data}")
     logging.info(f"Test-train ratio: {args.test_train_ratio}")
@@ -67,9 +64,9 @@ def main(args):  # Write the function name for the main data preparation logic
     # Log completion
     mlflow.log_metric("train_size", len(train_df))
     mlflow.log_metric("test_size", len(test_df))
-    mlflow.end_run()
 
 if __name__ == "__main__":
+    # Start MLflow Run
     mlflow.start_run()
 
     # Parse Arguments
@@ -87,4 +84,5 @@ if __name__ == "__main__":
     
     main(args)
 
+    # End MLflow Run
     mlflow.end_run()
