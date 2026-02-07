@@ -39,7 +39,7 @@ def main(args):  # Write the function name for the main data preparation logic
     # Step 4: Log the number of rows in the training and testing datasets as metrics for tracking and evaluation.  
 
     # Log arguments
-    logging.info(f"Input data path: {args.data}")
+    logging.info(f"Input data path: {args.raw_data}")
     logging.info(f"Test-train ratio: {args.test_train_ratio}")
 
     # Read data
